@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Gizra/Gizra/elm-storage-key.svg?branch=master)](https://travis-ci.org/Gizra/Gizra/elm-storage-key)
+[![Build Status](https://travis-ci.org/Gizra/elm-storage-key.svg?branch=master)](https://travis-ci.org/Gizra/elm-storage-key)
 
 StorageKey
 ========
