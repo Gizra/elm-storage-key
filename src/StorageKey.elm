@@ -61,7 +61,7 @@ isNew storageKey =
         |> StorageKey.isExisting  --> False
 
     StorageKey.Existing "uuid-1234"
-        |> StorageKey.isNew  --> True
+        |> StorageKey.isExisting  --> True
 
 -}
 isExisting : StorageKey recordId -> Bool
