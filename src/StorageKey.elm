@@ -60,5 +60,5 @@ isNew storageKey =
 
 -}
 isExisting : StorageKey recordId -> Bool
-isExisting =
-    not << isNew
+isExisting storageKey =
+    not <| isNew storageKey
