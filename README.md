@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/Gizra/Gizra/elm-all-set.svg?branch=master)](https://travis-ci.org/Gizra/Gizra/elm-all-set)
+[![Build Status](https://travis-ci.org/Gizra/Gizra/elm-storage-key.svg?branch=master)](https://travis-ci.org/Gizra/Gizra/elm-storage-key)
 
 StorageKey
 ========
 
-> A set of unique values. The values can be any type (not just comparables).
+> A StorageKey represents a value that is either New or Existing.
 
 Lets take for example an `Article`. It will have a unique Id, and the article record itself. How would we distinguish between an existing
 Article (one that was fetched from the backend) vs a new one, while still having type safety?
@@ -44,10 +44,9 @@ type alias Person =
 ```
 
 
-
 ## Installation
 
-`elm-package install Gizra/Gizra/elm-all-set`
+`elm-package install Gizra/Gizra/elm-storage-key`
 
 ## Tests
 
