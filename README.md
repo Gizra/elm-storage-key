@@ -21,7 +21,7 @@ type alias Article =
     }
 
 
-{-| The Article ID is type safety.
+{-| The Article ID is type safe.
 -}
 type ArticleId
     = ArticleId Int
