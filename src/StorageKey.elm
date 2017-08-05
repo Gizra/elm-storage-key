@@ -47,15 +47,10 @@ type StorageKey recordId
 -}
 isNew : StorageKey recordId -> Bool
 isNew storageKey =
-    case storageKey of
-        New ->
-            True
-
-        _ ->
-            False
+    storageKey == New
 
 
-{-| Determines if a `StorageKey` is of type `New`.
+{-| Determines if a `StorageKey` is of type `Existing`.
 
     StorageKey.New
         |> StorageKey.isExisting  --> False
@@ -66,9 +61,4 @@ isNew storageKey =
 -}
 isExisting : StorageKey recordId -> Bool
 isExisting storageKey =
-    case storageKey of
-        Existing _ ->
-            True
-
-        _ ->
-            False
+    not <| isNew storageKey
