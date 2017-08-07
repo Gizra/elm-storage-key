@@ -46,7 +46,7 @@ type alias Person =
 
 ## Installation
 
-`elm-package install Gizra/Gizra/elm-storage-key`
+`elm-package install Gizra/elm-storage-key`
 
 ## Tests
 
