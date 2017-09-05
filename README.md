@@ -29,7 +29,7 @@ type ArticleId
 
 {-| We wrap the `ArticleId` with the `StorageKey`.
 -}
-type StorageKeyArticle =
+type alias StorageKeyArticle =
     StorageKey ArticleId
 
 
