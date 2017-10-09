@@ -3,6 +3,7 @@ module StorageKey
         ( StorageKey(..)
         , isExisting
         , isNew
+        , value
         )
 
 {-| A `StorageKey` represents a value that is either `New` or `Existing`.
@@ -14,7 +15,7 @@ to indicate if a value is already `Existing` - that is, stored in the backend, o
 
 If used as a key for an `EveryDict` we are guarnteed to have only a single `New`.
 
-@docs StorageKey, isExisting, isNew
+@docs StorageKey, isExisting, isNew, value
 
 -}
 
@@ -62,3 +63,23 @@ isNew storageKey =
 isExisting : StorageKey recordId -> Bool
 isExisting storageKey =
     not <| isNew storageKey
+
+
+{-| Gets the record ID value out of a `StorageKey` if it is of type `Existing`.
+Otherwise, it retuens `Nothing`.
+
+    StorageKey.New
+        |> StorageKey.value  --> Nothing
+
+    StorageKey.Existing "uuid-1234"
+        |> StorageKey.value  --> Just "uuid-1234"
+
+-}
+value : StorageKey recordId -> Maybe recordId
+value storageKey =
+    case storageKey of
+        Existing val ->
+            Just val
+
+        New ->
+            Nothing
