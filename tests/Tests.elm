@@ -33,4 +33,16 @@ all =
                         |> StorageKey.isNew
                         |> Expect.equal False
             ]
+        , describe "#value"
+            [ fuzz string "return Nothing if `StorageKey` is `New`" <|
+                \_ ->
+                    New
+                        |> StorageKey.value
+                        |> Expect.equal Nothing
+            , fuzz string "return record ID if `StorageKey` is `Existing`" <|
+                \value ->
+                    Existing value
+                        |> StorageKey.value
+                        |> Expect.equal (Just value)
+            ]
         ]
