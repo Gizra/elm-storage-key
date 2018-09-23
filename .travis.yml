@@ -1,15 +1,13 @@
-sudo: false
-
+sudo: false # force container-based infrastructure
 language: node_js
-
-os:
-  - linux
-
+node_js:
+  - "node"
 install:
-  - node --version
-  - npm --version
   - npm install
-
 script:
-  - elm-format --validate src tests
   - npm test
+cache:
+  directories:
+    - "node_modules"
+    - "elm-stuff"
+    - "tests/elm-stuff"
