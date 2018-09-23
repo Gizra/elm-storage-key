@@ -25,4 +25,6 @@ script:
   - elm-format --validate src tests
   - elm make
   - elm-test
-  - elm-verify-examples
+  # Use the elm-test path of the global one, instead the one installed with
+  # `elm-verify-examples`
+  - elm-verify-examples --elm-test=$(npm config get prefix)/elm-verify-examples/node_modules/.bin/elm-test
