@@ -11,5 +11,6 @@ install:
 
 script:
   - elm-format --validate src tests
+  - elm make
   - elm-test
   - elm-verify-examples
