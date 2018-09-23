@@ -1,0 +1,15 @@
+{
+  "name": "elm-storage-key",
+  "version": "0.0.0",
+  "description": "A StorageKey represents a value that is either New or Existing.",
+  "scripts": {
+    "test": "elm-verify-examples && elm-test"
+  },
+  "author": "Gizra",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "elm": "^0.19.0",
+    "elm-format": "^0.8.0"
+  },
+  "dependencies": {}
+}
