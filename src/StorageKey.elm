@@ -1,10 +1,4 @@
-module StorageKey
-    exposing
-        ( StorageKey(..)
-        , isExisting
-        , isNew
-        , value
-        )
+module StorageKey exposing (StorageKey(..), isExisting, isNew, value)
 
 {-| A `StorageKey` represents a value that is either `New` or `Existing`.
 
